@@ -1,3 +1,5 @@
+-- Create a Clothes Store Database:
+
 CREATE TABLE clothes (id INTEGER PRIMARY KEY, itemname TEXT, itemtype TEXT, quantity INTEGER, price INTEGER);
 INSERT INTO clothes VALUES (1, "Wool Trousers", "Trousers", 50, 25);
 INSERT INTO clothes VALUES
@@ -15,6 +17,10 @@ INSERT INTO clothes VALUES
 (13, "Grey Trousers", "Trousers", 10, 10),
 (14, "T-shirt", "Shirts", 16, 6),
 (15, "Acrylic T-shirt", "Shirts", 65, 12);
+
+-- Display the database ordered by price in ascending order by default:
 SELECT * FROM clothes;
 SELECT * FROM clothes ORDER BY price;
-SELECT SUM(quantity) FROM clothes ORDER BY price;
+
+-- What is the total quantity of items in the store:
+SELECT SUM(quantity) FROM clothes;
